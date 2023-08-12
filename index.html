@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Match Work - Página Inicial</title>
+
     <link rel="icon" href="assets/img/logo.ico" type="image/x-icon">
+    <!-- Inclua o jQuery antes do Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Use a mesma versão do Bootstrap para CSS e JS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
     <header>
@@ -16,13 +23,14 @@
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
                 Match Work
-              </a>
-    
+            </a>
+
             <!-- Botão de colapso para telas menores -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <!-- Itens do menu -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto"> <!-- ml-auto alinha os itens à direita -->
@@ -36,14 +44,130 @@
                         <a class="nav-link" href="#">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-info"  href="#">Cadastre-se</a>
+                        <a class="btn btn-info" href="#">Cadastre-se</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <h1>Match Work</h1>
+
+
+    <div class="container mt-5">
+        <div class="row p-2">
+            <div class="col-sm d-flex justify-content-center align-items-center flex-column">
+                <h2>#MatchWork: a ponte entre você e as melhores oportunidades</h2>
+                <p>Match Work é a plataforma dedicada a transformar o cenário de empregabilidade para pessoas em
+                    situação de
+                    baixa renda. Nós conectamos você a vagas que se alinham às suas habilidades e experiências.
+                    Junte-se a nós e dê o primeiro
+                    passo em direção ao seu futuro profissional!</p>
+            </div>
+            <div class="col-sm">
+                <img class="img-fluid" src="assets/img/match.png" alt="">
+            </div>
+        </div>
+
+        <section class="mt-5">
+            <h2 class="text-center">Como funciona?</h2>
+
+            <div class="row p-lg-5">
+                <div class="col-sm">
+                    <p>1. Cadastro e Definição de Competências</p>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="assets/img/Inicio/card_cadastro.png"
+                            alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <p class="card-text">Candidato(a): Cadastre suas competências técnicas e comportamentais.
+                                Recrutador(a): Crie uma vaga especificando as competências desejadas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <p>2. Match e Registro de Interesse</p>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="assets/img/Inicio/card_match.png" alt="Imagem de capa do card">
+                        <div class="card-body">
+                            <p class="card-text">Visualize as vagas alinhadas às suas competências de forma rápida,
+                                fácil e prática. Registre interesse naquelas que combinam com seu perfil.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <p>3. Processo Seletivo</p>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="assets/img/Inicio/card_processo.png" alt="">
+                        <div class="card-body">
+                            <p class="card-text">Se aprovado pela pessoa recrutadora, inicie o processo seletivo.
+                                Participe de testes técnicos (se aplicável) e avance nas etapas de seleção.</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="mt-5 mb-5">
+            <div class="row">
+                <div class="col-sm ">
+                    <h2 class="text-center justify-content-center mb-5">Quem Pode Participar?</h2>
+                    <div class="accordion" id="accordionExample">
+
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        1. Requisitos para Candidatos
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Baixa renda</li>
+                                        <li>Inscrição ativa no Cadastro Único</li>
+                                        <li>Acesso à Internet</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        2. Requisitos para Recrutadores
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Nome completo da empresa ou organização.</li>
+                                        <li>CNPJ válido ou equivalente (para empresas internacionais).</li>
+                                        <li>Endereço físico e informações de contato.</li>
+                                        <li>Descrever as vagas disponíveis, especificando competências técnicas e
+                                            comportamentais desejadas.</li>
+                                        <li>Compromisso em fornecer feedback aos candidatos, independentemente do
+                                            resultado.
+                                            Disponibilidade para participar de entrevistas, testes ou outras etapas do
+                                            processo seletivo.</li>
+                                    </ul>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -51,6 +175,81 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
         crossorigin="anonymous"></script>
+
 </body>
+
+<div id="reviewsCarousel" class="carousel slide bg-info text-light p-5" data-ride="carousel" data-interval="5000">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <img src="assets/img/Inicio/user1.png" alt="User 1" class="rounded-circle mb-3"
+                        style="width: 100px;">
+                    <h5>Ana Clara, 23 anos</h5>
+                    <p>"Sempre achei difícil encontrar um emprego que se alinhasse às minhas habilidades, especialmente
+                        sendo tão jovem e sem muita experiência. A plataforma Match Work mudou isso para mim! Em menos
+                        de um mês, consegui duas entrevistas e estou otimista sobre o meu futuro. Recomendo a todos os
+                        jovens em busca de uma oportunidade!"</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <img src="assets/img/Inicio/user2.png" alt="User 2" class="rounded-circle mb-3"
+                        style="width: 100px;">
+                    <h5>Rodrigo, 20 anos</h5>
+                    <p>"O que mais me impressionou na Match Work foi a facilidade de uso. O processo de cadastro foi
+                        simples, e em pouco tempo, já estava vendo vagas que realmente combinavam com o que eu
+                        procurava. Agradeço à equipe por criar algo tão útil para nós, jovens em busca do primeiro
+                        emprego."
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <img src="assets/img/Inicio/user3.png" alt="User 3" class="rounded-circle mb-3"
+                        style="width: 100px;">
+                    <h5>Lívia, 24 anos</h5>
+                    <p>"Eu estava quase desistindo de procurar emprego quando um amigo me recomendou a Match Work.
+                        Decidi tentar e fiquei surpresa com os resultados. A plataforma não só me conectou a
+                        recrutadores que valorizavam minhas habilidades, mas também me deu dicas valiosas para as
+                        entrevistas. Hoje, estou empregada e grata por ter encontrado esta plataforma!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#reviewsCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#reviewsCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+    </a>
+</div>
+<footer class="bg-dark text-white">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Saiba mais</h5>
+                <p>Sobre nós</p>
+                <p>Squad 007</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Contato</h5>
+                <p>e-mail: contato@matchwork.com</p>
+                <p>telefone: (21)3333-3333</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Parceria</h5>
+                <img src="assets/img/Inicio/recode.jpeg" alt="recode">
+            </div>
+        </div>
+    </div>
+</footer>
 
 </html>
